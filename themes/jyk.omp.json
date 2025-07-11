@@ -1,0 +1,149 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "console_title_template": "{{ if .Root }}root @ {{ end }}{{ .Shell }} in {{ .Folder }}",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#D6DEEB",
+          "style": "plain",
+          "template": "\u256d\u2500",
+          "type": "text"
+        },
+        {
+          "background": "#777474",
+          "foreground": "#D6DEEB",
+          "leading_diamond": "\ue0b6",
+          "properties": {
+            "alpine": "\uf300",
+            "arch": "\uf303",
+            "centos": "\uf304",
+            "debian": "\uf306",
+            "elementary": "\uf309",
+            "fedora": "\uf30a",
+            "gentoo": "\uf30d",
+            "linux": "\ue712",
+            "macos": "\ue711",
+            "manjaro": "\uf312",
+            "mint": "\uf30f",
+            "opensuse": "\uf314",
+            "raspbian": "\uf315",
+            "ubuntu": "\uf31c",
+            "windows": "\ue70f"
+          },
+          "trailing_diamond": "\ue0b0",
+          "style": "diamond",
+          "template": " {{ if .WSL }}\ue712 on {{ end }}{{ .Icon }} ",
+          "type": "os"
+        },
+        {
+          "background": "#546E7A",
+          "foreground": "#26C6DA",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "folder_icon": "\uf07b",
+            "home_icon": "\ueb06",
+            "style": "agnoster_short",
+            "max_depth": 13,
+            "mapped_locations_enabled": false
+          },
+          "style": "powerline",
+          "template": " \uf07b {{ .Path }} ",
+          "type": "path"
+        },        
+        {
+          "background": "#EF541C",
+          "foreground": "#D6DEEB",
+          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "template": " \uf09c admin ",
+          "type": "root"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "background": "#03DED3",
+          "background_templates": [
+            "{{ if gt .Code 0 }}#f1184c{{ end }}"
+          ],
+          "foreground": "#414141",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#ffffff{{ end }}"
+          ],
+          "leading_diamond": "\ue0b6",
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "diamond",
+          "template": " {{ if gt .Code 0 }}\uf00d{{ else }}\uf00c{{ end }} \ue23a ",
+          "type": "status"
+        },
+        {
+          "background": "#575656",
+          "foreground": "#F2D3B6",
+          "properties": {
+            "time_format": " <#D6DEEB>\ue641 15:04:05</>"
+          },
+          "style": "diamond",
+          "template": "{{ .CurrentDate | date .Format }} <#79DFE1>|</>",
+          "type": "time"
+        },
+        {
+          "background": "#575656",
+          "foreground": "#D6DEEB",
+          "properties": {
+            "style": "roundrock",
+            "threshold": 0
+          },
+          "style": "diamond",
+          "template": " \uf252 {{ .FormattedMs }} ",
+          "trailing_diamond": "\ue0b4",
+          "type": "executiontime"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#D6DEEB",
+          "style": "plain",
+          "template": "\u2570\u2500",
+          "type": "text"
+        },
+        {
+          "background": "#91c9d1",
+          "foreground": "#000000",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b0 ",
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "diamond",
+          "template": " \uf489 {{ .Name }} ",
+          "type": "shell"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "osc99": true,
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "#FEF5ED",
+    "template": "\ue285 "
+  },
+  "secondary_prompt": {
+    "background": "transparent",
+    "foreground": "#D6DEEB",
+    "template": "\u2570\u2500\u276f "
+  },
+  "version": 2
+}

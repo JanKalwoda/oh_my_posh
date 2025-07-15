@@ -58,7 +58,7 @@ Each time this configuration is edited you should reload it by using
 
 ## Using prepared themes and configuration.
 
-In 'PowerShthe ell_config' folder, there is already a prepared PowerShell configuration file that I prefer (and recommend) to use:
+In the 'PowerShell_config' folder, there is already a prepared PowerShell configuration file that I prefer (and recommend) to use:
 
 ```
 Microsoft.PowerShell_profile_jyk_v2.ps1
@@ -66,6 +66,14 @@ Microsoft.PowerShell_profile_jyk_v2.ps1
 
 It not only will start oh-my-posh each time PowerShell is opened, but also contains some useful scripts, allowing e.g. see history of 10 recent commands.
 Some of those scripts might need the installation of additional modules. More on that in [**Miscellaneos**](#miscellaneous) section below.
+
+In the 'themes' folder, there is a theme that is used in the configuration file mentioned above:
+
+```
+jyk.omp.json
+```
+
+You need to copy it to the theme folder used by oh-my-posh. The path to this folder should be added to the environment variables under 'POSH_THEMES_PATH'.
 
 ## Miscellaneous
 
